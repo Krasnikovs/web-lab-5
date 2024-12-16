@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Image Gallery</title>
+    <script src="script.js"></script>
+    <style>
+        .filters {
+            margin-bottom: 20px;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Interactive Image Gallery</h1>
+    
+    <div class="filters">
+        <button id="allFilter">All</button>
+        <button id="natureFilter">Nature</button>
+        <button id="cityFilter">City</button>
+        <button id="abstractFilter">Abstract</button>
+		<select id="sortBy">
+			<option value="nameAsc">Sort by Name (A-Z)</option>
+			<option value="nameDesc">Sort by Name (Z-A)</option>
+			<option value="dateAsc">Sort by Date (Ascending)</option>
+			<option value="dateDesc">Sort by Date (Descending)</option>
+		</select>
+    </div>
+
+    <form id="imageForm">
+        <input type="text" id="imageUrl" placeholder="Image URL">
+        <div id="urlError" class="error"></div>
+        <input type="text" id="imageName" placeholder="Image Name">
+        <div id="nameError" class="error"></div>
+        <select id="imageCategory">
+            <option value="">Select Category</option>
+            <option value="Nature">Nature</option>
+            <option value="City">City</option>
+            <option value="Abstract">Abstract</option>
+        </select>
+        <div id="categoryError" class="error"></div>
+        <button type="submit">Add Image</button>
+    </form>
+
+    <div class="gallery-container" id="gallery"></div>
+
+</body>
+</html>
